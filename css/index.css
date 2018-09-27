@@ -1,0 +1,482 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+body{
+	background: #f5f5f5;
+}
+/*头部*/
+.header{
+	width: 100%;
+	height: 9.6rem;
+	background: linear-gradient(to bottom,#50ade8,#7ae0fa);
+	position: relative;
+}
+.header .place{
+	position: relative;
+	width: 100%;
+	height: 1rem;
+	font-size: 16px;
+	color: #ffffff;
+	/*opacity: .8;*/
+	text-align: center;
+	line-height: 1rem;
+}
+
+.header .place .place-con i{
+	font-size: 18px;
+}
+.header .place img{
+	position: absolute;
+	right: .24rem;
+	top: .25rem;
+	display: block;
+	width: .42rem;
+	height: .5rem;
+}
+.header .air{
+	width: 1.48rem;
+	height: .88rem;
+	background: #f1ab62;
+	border-radius: .2rem;
+	font-size: 16px;
+	color: #FFFFFF;
+	margin-left: .24rem;
+	overflow: hidden;
+	margin-top: .3rem;
+}
+.header .air span{
+	display: block;
+	text-align: center;
+}
+.header .air .kq{
+	font-size: 14px;
+	width: 100%;
+	height: .28rem;
+	margin-top: .06rem;
+}
+.header .air .qk{
+	font-size: 14px;
+	width: 100%;
+	height: .34rem;
+	margin-top: .04rem;
+}
+.header .bg{
+	display: block;
+	width: 100%;
+	height: 2.45rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.header p{
+	width: 100%;
+	text-align: center;
+	color: #FFFFFF;
+	opacity: .8;
+}
+.header .positive{
+	height: 1.24rem;
+	font-size: 1.24rem;
+	line-height: 1.2rem;
+	padding-left: .28rem;
+}
+.header .txt-weather{
+	height: .44rem;
+	line-height: .44rem;
+	margin-top: .16rem;
+	font-size: .42rem;
+}
+.header .ct-wind{
+	height: .28rem;
+	line-height: .28rem;
+	margin-top: .2rem;
+	font-size: .28rem;
+}
+.header .txt-tips{
+	height: .32rem;
+	margin-top: 1.2rem;
+	font-size: .32rem;
+}
+
+/*天气情况*/
+/*今天、明天开始*/
+.con{
+	width: 100%;
+	height: 2.06rem;
+	padding-top: .52rem;
+	margin-bottom: .2rem;
+	border-bottom: .02rem solid #e4e4e4;
+	position: relative;
+	background: #FFFFFF;
+}
+.con .item{
+	float: left;
+	width: 50%;
+	height: 1.04rem;
+	font-size: .28rem;
+	padding: 0 .4rem;
+}
+.con .top{
+	height: .24rem;
+	margin-bottom: .26rem;
+}
+.con .data{
+	float: left;
+}
+.con .temperature{
+	float: right;
+}
+.con .bottom{
+	height: .44rem;
+}
+.con .weather{
+	height: .44rem;
+	float: left;
+	line-height: .44rem;
+}
+.con img{
+	float: right;
+	width: .44rem;
+	height: .44rem;
+	/*background-image: url(../img/0.png);
+	background-size: .44rem;
+	background-repeat: no-repeat;*/
+	display: block;
+}
+.con:after{
+	content: "";
+	display: block;
+	width: .02rem;
+	height: 1.04rem;
+	background-color: #f0f0f0;
+	position: absolute;
+	left: 50%;
+}
+
+/*未来24小时的天气情况*/
+.container{
+	width: 100%;
+	height: 2.72rem;
+	background: #FFFFFF;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding-top: .6rem;
+	margin-bottom: .2rem;
+	border-bottom: .02rem solid #e4e4e4;
+}
+.container .ct-scroll{
+	width: 31.2rem;
+	height: 100%;
+	background: #FFFFFF;
+}
+.container::-webkit-scrollbar{
+	width: 0;
+}
+.container li{
+	float: left;
+	width: 1.2rem;
+	height: 1.6rem;
+	text-align: center;
+}
+.container li .txt-times{
+	font-size: .24rem;
+	color: #999;
+	height: .24rem;
+	line-height: .24rem;
+}
+.container li img{
+	width: .48rem;
+	height: .48rem;
+	display: block;
+	margin: .3rem auto;
+}
+.container li .txt-degree{
+	font-size: .26rem;
+	color: #434343;
+	height: .28rem;
+	line-height: .28rem;
+}
+
+/*未来半个月的天气情况*/
+.sec-days{
+	width: 100%;
+	height: 7.82rem;
+	background: #FFFFFF;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding-top: .6rem;
+	margin-bottom: .2rem;
+	border-bottom: .02rem solid #e4e4e4;
+	border-top: .02rem solid #e4e4e4;
+}
+.sec-days .ct-scroll{
+	width: 20rem;
+	height: 6.84rem;	
+}	
+.sec-days::-webkit-scrollbar{
+	width: 0;
+}
+.sec-days li{
+	width: 1.25rem;
+	float: left;
+	text-align: center;
+}
+.sec-days li .day{
+	font-size: .24rem;
+	color: #b2b2b2;
+	height: .24rem;
+	line-height: .24rem;
+}
+.sec-days li .date{
+	font-size: .24rem;
+	color: #b2b2b2;
+	height: .24rem;
+	line-height: .24rem;
+	margin: .1rem 0 .3rem;
+}
+.sec-days li .ct-daytime{
+	height: 1.04rem;
+}
+.sec-days li .weather{
+	font-size: .28rem;
+	color: #434343;
+	height: .28rem;
+	line-height: .28rem;
+}
+.sec-days li:first-child .weather{
+	color: #B2B2B2;
+}
+.sec-days li .ct-daytime .weather{
+	margin-bottom: .3rem;
+}
+.sec-days li .ct-night .weather{
+	margin: .32rem 0 .4rem;
+}
+.sec-days li img{
+	width: .48rem;
+	height: .48rem;
+	display: block;
+	margin: 0 auto;
+}
+.sec-days li:first-child img{
+	opacity: .5;
+}
+.sec-days li .ct-night{
+	margin-top: 2.72rem;
+}
+.sec-days li .wind{
+	font-size: .24rem;
+	color: #B2B2B2;
+	height: .24rem;
+	line-height: .24rem;
+	margin-bottom: .12rem;
+}
+
+
+.sec-living{
+	width: 100%;
+	height: 4.6rem;
+	/*overflow: hidden;*/
+}
+.sec-living .living-scroll{
+	width: 100%;
+	height: 3.8rem;
+	text-align: center;
+}
+.sec-living .living-scroll ul{
+	width: 7.5rem;
+	height: 3.8rem;
+	border-top: .02rem solid #e4e4e4;
+    border-right: .02rem solid #e4e4e4;
+    border-bottom: .02rem solid #e4e4e4;
+	/*box-sizing: border-box;*/
+}
+.sec-living .living-scroll ul li{
+	width: 25%;
+	height: 1.88rem;
+	float: left;
+	text-align: center;
+	border-right: .02rem solid #e6e6e6;
+    border-bottom: .02rem solid #e6e6e6;
+    box-sizing: border-box;
+    background: #FFFFFF;
+}
+.sec-living .living-scroll ul li:nth-child(4n){
+	border-right: 0;
+}
+.sec-living .living-scroll ul li:nth-child(n+5){
+	border-bottom: 0;
+}
+.sec-living .living-scroll ul li .icon{
+	display: block;
+	width: .48rem;
+	height: .48rem;
+	margin: .3rem auto .2rem;
+	background-size: .48rem;
+}
+.sec-living .living-scroll ul li .xianxing{
+	background-image: url(../img/xz1.svg);
+}
+.sec-living .living-scroll ul li .chuanyi{
+	background-image: url(../img/xz.svg);
+}
+.sec-living .living-scroll ul li .yusan{
+	background-image: url(../img/xz2.svg);
+}
+.sec-living .living-scroll ul li .ganmao{
+	background-image: url(../img/xz3.svg);
+}
+.sec-living .living-scroll ul li .xiche{
+	background-image: url(../img/xz4.svg);
+}
+.sec-living .living-scroll ul li .yundong{
+	background-image: url(../img/xz6.svg);
+}
+.sec-living .living-scroll ul li .fangshai{
+	background-image: url(../img/xz5.svg);
+}
+.sec-living .living-scroll ul li .diaoyu{
+	background-image: url(../img/xz7.svg);
+}
+.sec-living .living-scroll ul li .content{
+	font-size: .28rem;
+	color: #434343;
+	margin-bottom: .12rem;
+	height: .28rem;
+	line-height: .28rem;
+}
+.sec-living .living-scroll ul li .title{
+	font-size: .28rem;
+	color: #999;
+	height: .28rem;
+	line-height: .28rem;
+}
+.sec-living .living-scroll .laiyuan {
+	color: #bababa;
+	width: 100%;
+	height: .8rem;
+	line-height: .8rem;
+	font-size: .28rem;
+}
+
+/*城市开始*/
+.sec-location{
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: #FFFFFF;
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: all .5s;
+	display: none;
+}
+.sec-location::-webkit-scrollbar{
+	width: 0;
+}
+.sec-location .ct-search{
+	width: 100%;
+	height: .9rem;
+	padding: .14rem 0;
+	position: relative;
+	border-bottom: .02rem solid #eee;
+}
+.sec-location .button{
+	float: right;
+	font-size: .28rem;
+	color: #434343;
+	width: 1.2rem;
+	line-height: .6rem;
+	text-align: center;
+}
+.sec-location .ct-input{
+	float: left;
+	margin-left: .24rem;
+	width: 6.04rem;
+	height: .6rem;
+	position: relative;
+}
+.sec-location input{
+	width: 100%;
+	height: 100%;
+	border-radius: .88rem;
+	line-height: .24rem;
+	background: #f2f2f2;
+	font-size: .24rem;
+	color: #434343;
+	padding: .1rem 0 .1rem .64rem;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: none;
+	outline: none;
+}
+.sec-location .icon-search{
+	position: absolute;
+	left: .2rem;
+	top: .16rem;
+	width: .28rem;
+	height: .28rem;
+	font-size: .28rem;
+	background-image: url(../img/ss.svg);
+	background-repeat: no-repeat;
+	z-index: 99;
+}
+.sec-location .ct-hot-city{
+	width: 100%;
+	/*height: 12.44rem;*/
+	padding: .24rem .26rem .14rem;
+}
+.sec-location .ct-hot-city .title{
+	font-size: .32rem;
+	color: #434343;
+	/*width: 100%;*/
+	height: .44rem;
+	line-height: .4rem;
+	margin: .2rem 0;
+	float: left;
+}
+.sec-location .ct-hot-city .delete{
+	display: block;
+	width: .44rem;
+	height: .44rem;
+	float: right;
+	margin: .2rem 0;
+	text-align: center;
+	line-height: .44rem;
+	display: flex;
+	color: #434343;
+	font-size: .3rem;
+}
+.sec-location .ct-hot-city .delete i{
+	font-size: .4rem;
+}
+.sec-location .ct-hot-city ul{
+	width: 100%;
+	overflow: auto;
+}
+
+.sec-location .ct-hot-city .ls-city{
+	padding: 0 .32rem;
+	width: 32%;
+	height: .64rem;
+	line-height: .64rem;
+	text-align: center;
+	background: #F2F2F2;
+	color: #434343;
+	border-radius: .88rem;
+	font-size: .28rem;
+	float: left;
+	margin-bottom: .24rem;
+	margin-right: .08rem;
+	box-sizing: border-box;
+}

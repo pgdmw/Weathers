@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>天气</title>
+    
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_853179_jooyms4h9v.css" />
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		
+    </script>
+</head>
+<body>
+	<!--头部开始-->
+	<div class="header">
+		<div class="place">
+			<i class="iconfont icon-location"></i>
+			<span>太原市 阳曲县</span>
+			<img src="img/pic.png" alt="" />
+		</div>
+		<div class="air">
+			<span class="kq">空气</span>
+			<span class="qk">轻度污染</span>
+		</div>
+		<p class="positive">0°</p>
+		<p class="txt-weather">晴</p>
+		<p class="ct-wind">温度 28°</p>
+		<p class="txt-tips">天冷了，注意保暖~</p>
+		<img src="img/screen.png" alt="" class="bg"/>
+	</div>
+	<!--头部结束-->
+	<!--中间开始-->
+	<!--今天、明天-->
+	<section class="con">
+		<div class="item today">
+			<div class="top">
+				<p class="data">今天</p>
+				<p class="temperature">
+					<span>2</span>
+					<span>/</span>
+					<span>-11°C</span>
+				</p>
+			</div>
+			<div class="bottom">
+				<p class="weather">晴转多云</p>
+				<!--<div class="logo"></div>-->
+				<img src="img/0.png" alt="" class="sui"/>
+			</div>
+		</div>
+		<div class="item tomorrow">
+			<div class="top">
+				<p class="data">明天</p>
+				<p class="temperature">
+					<span>3</span>
+					<span>/</span>
+					<span>-13°C</span>
+				</p>
+			</div>
+			<div class="bottom">
+				<p class="weather">晴</p>
+				<!--<div class="logo"></div>-->
+				<img src="img/0.png" alt="" class="to"/>
+			</div>
+		</div>
+	</section>
+	<!--未来24小时天气情况-->
+	<section class="container">
+		<div class="ct-scroll">
+			<ol>
+				<!--<li class="item">
+					<p class="txt-times">12:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">-1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">13:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">0°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">14:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">15:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">16:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">17:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">18:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">-1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">18:06</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">日落</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">19:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">0°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">20:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">21:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">22:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">23:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">明天</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">-1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">01:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">0°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">02:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">03:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">04:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">05:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">06:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">-1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">06:07</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">日出</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">07:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">0°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">08:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">09:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">1°</p>
+				</li>
+				<li class="item">
+					<p class="txt-times">10:00</p>
+					<img src="img/0.png" alt="" />
+					<p class="txt-degree">1°</p>
+				</li>-->
+			</ol>
+		</div>
+	</section>
+	<!--未来半个月天气情况-->
+	<section class="sec-days">
+		<div class="ct-scroll">
+			<ol>
+				<!--<li>
+					<p class="day">昨天</p>
+					<p class="date">01/15</p>
+					<div class="ct-daytime">
+						<p class="weather">多云</p>
+						<img src="img/1.png" alt="" />
+					</div>
+					<div class="ct-night">
+						<img src="img/31.png" alt="" />
+						<p class="weather">多云</p>
+					</div>
+					<p class="wind">西北风</p>
+					<p class="wind">3级</p>
+				</li>
+				<li>
+					<p class="day">今天</p>
+					<p class="date">01/16</p>
+					<div class="ct-daytime">
+						<p class="weather">晴</p>
+						<img src="img/0.png" alt="" />
+					</div>
+					<div class="ct-night">
+						<img src="img/31.png" alt="" />
+						<p class="weather">多云</p>
+					</div>
+					<p class="wind">西南风</p>
+					<p class="wind">3级</p>
+				</li>
+				<li>
+					<p class="day">明天</p>
+					<p class="date">01/17</p>
+					<div class="ct-daytime">
+						<p class="weather">晴</p>
+						<img src="img/0.png" alt="" />
+					</div>
+					<div class="ct-night">
+						<img src="img/30.png" alt="" />
+						<p class="weather">晴</p>
+					</div>
+					<p class="wind">西北风</p>
+					<p class="wind">4级</p>
+				</li>
+				<li>
+					<p class="day">后天</p>
+					<p class="date">01/18</p>
+					<div class="ct-daytime">
+						<p class="weather">多云</p>
+						<img src="img/1.png" alt="" />
+					</div>
+					<div class="ct-night">
+						<img src="img/30.png" alt="" />
+						<p class="weather">晴</p>
+					</div>
+					<p class="wind">西风</p>
+					<p class="wind">3级</p>
+				</li>
+				<li>
+					<p class="day">星五</p>
+					<p class="date">01/19</p>
+					<div class="ct-daytime">
+						<p class="weather">晴</p>
+						<img src="img/0.png" alt="" />
+					</div>
+					<div class="ct-night">
+						<img src="img/30.png" alt="" />
+						<p class="weather">晴</p>
+					</div>
+					<p class="wind">西风</p>
+					<p class="wind">3级</p>
+				</li>
+				<li>
+					<p class="day">星六</p>
+					<p class="date">01/20</p>
+					<div class="ct-daytime">
+						<p class="weather">晴</p>
+						<img src="img/0.png" alt="" />
+					</div>
+					<div class="ct-night">
+						<img src="img/31.png" alt="" />
+						<p class="weather">多云</p>
+					</div>
+					<p class="wind">西风</p>
+					<p class="wind">3级</p>
+				</li>
+				<li>
+					<p class="day">星日</p>
+					<p class="date">01/21</p>
+					<div class="ct-daytime">
+						<p class="weather">晴</p>
+						<img src="img/0.png" alt="" />
+					</div>
+					<div class="ct-night">
+						<img src="img/30.png" alt="" />
+						<p class="weather">晴</p>
+					</div>
+					<p class="wind">西风</p>
+					<p class="wind">3级</p>
+				</li>
+				<li>
+					<p class="day">星一</p>
+					<p class="date">01/22</p>
+					<div class="ct-daytime">
+						<p class="weather">晴</p>
+						<img src="img/0.png" alt="" />
+					</div>
+					<div class="ct-night">
+						<img src="img/31.png" alt="" />
+						<p class="weather">多云</p>
+					</div>
+					<p class="wind">西风</p>
+					<p class="wind">3级</p>
+				</li>-->
+			</ol>
+		</div>
+	</section>
+	<section class="sec-living">
+		<div class="living-scroll">
+			<ul>
+				<li>
+					<span class="icon yusan"></span>
+					<p class="content">不带伞</p>
+					<p class="title">雨伞</p>
+				</li>
+				<li>
+					<span class="icon chuanyi"></span>
+					<p class="content">冷</p>
+					<p class="title">穿衣</p>
+				</li>
+				<li>
+					<span class="icon fangshai"></span>
+					<p class="content">较弱</p>
+					<p class="title">防晒</p>
+				</li>
+				<li>
+					<span class="icon ganmao"></span>
+					<p class="content">较易发</p>
+					<p class="title">感冒</p>
+				</li>
+				<li>
+					<span class="icon yundong"></span>
+					<p class="content">较不宜</p>
+					<p class="title">运动</p>
+				</li>
+				<li>
+					<span class="icon xiche"></span>
+					<p class="content">较适宜</p>
+					<p class="title">洗车</p>
+				</li>
+				<li>
+					<span class="icon diaoyu"></span>
+					<p class="content">不宜</p>
+					<p class="title">钓鱼</p>
+				</li>
+				<li>
+					<span class="icon xianxing"></span>
+					<p class="content">良好</p>
+					<p class="title">交通</p>
+				</li>
+			</ul>
+			<p class="laiyuan">数据来源于中国天气网</p>
+		</div>
+	</section>
+	<!--城市开始-->
+	<section class="sec-location">
+		<div class="ct-search">
+			<div class="button">取消</div>
+			<div class="ct-input">
+				<span class="icon-search"></span>
+				<input type="text" placeholder="搜索市、区、县等" value=""/>
+			</div>
+		</div>
+		<div class="ct-hot-city">
+			<p class="title">当前定位</p>
+			<ul>
+				<li class="ls-city">小店市</li>
+			</ul>
+			<div class="history">
+				<p class="title">历史记录</p>
+				<a href="javjsctipt:void(false)" class="delete"><i class="iconfont icon-shanchu"></i></a>
+				<ul>
+					<li class="ls-city">披萨</li>
+					<li class="ls-city">上海</li>
+				</ul>
+			</div>
+			<p class="title city">热门城市</p>
+			<ul class="hotscitys">
+				<li class="ls-city">北京</li>
+				<li class="ls-city">上海</li>
+				<li class="ls-city">广州</li>
+				<li class="ls-city">深圳</li>
+				<li class="ls-city">郑州</li>
+				<li class="ls-city">西安</li>
+				<li class="ls-city">南京</li>
+				<li class="ls-city">杭州</li>
+				<li class="ls-city">武汉</li>
+				<li class="ls-city">成都</li>
+				<li class="ls-city">沈阳</li>
+				<li class="ls-city">天津</li>
+			</ul>
+			<p class="title hot">热门景区</p>
+			<ul class="remen">
+				<!--<li class="ls-city">故宫</li>
+				<li class="ls-city">颐和园</li>
+				<li class="ls-city">九寨沟</li>
+				<li class="ls-city">凤凰古城</li>
+				<li class="ls-city">秦始皇陵</li>
+				<li class="ls-city">龙门九窟</li>
+				<li class="ls-city">武陵源</li>
+				<li class="ls-city">华山</li>
+				<li class="ls-city">黄山</li>-->
+			</ul>
+		</div>
+	</section>
+</body>
+</html> 
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/index.js"></script>
