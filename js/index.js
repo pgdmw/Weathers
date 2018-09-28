@@ -133,19 +133,21 @@ console.log(tianqi.weather.dat_weather_icon_id);
 		})
 		//当点击搜索时，获得input中的内容进行搜索
 		$(".sec-location .button").click(function(){
-//			if()
-			$(".sec-location").css({"display":"none"});
 			let text=$(".ct-input input").val();
-			console.log(text);
-			for(let i in city){
-				for(let j in city[i]){
-					if(text==j){
-						ajaxs(text);
-						return;
+			if(text==""){
+				$(".sec-location").css({"display":"none"});
+			}else{
+				$(".sec-location").css({"display":"none"});
+				for(let i in city){
+					for(let j in city[i]){
+						if(text==j){
+							ajaxs(text);
+							return;
+						}
 					}
 				}
+				alert("该城市不存在");
 			}
-			alert("该城市不存在");
 		})
 	}
 
